@@ -1,29 +1,26 @@
 import csv
 
-with open('CR++.csv', 'r') as csv_file:
-    csv_reader = csv.reader(csv_file)
+csv_reader = csv.reader(open('file.csv', 'r'))
 
-    for alt_time in csv_reader:
-        i = alt_time[0]
-        j = alt_time[3]
-        if i.isdigit():
-            i = int(i)
-        elif j.isdigit():
-            j = int(j)
+# flysight data is raw elevation and needs to be corrected.
+ground_level = int(input("please enter your DZ elevation in whole meters:\n
+                          > ."))
 
-    for window in csv_reader:
+# competition definition of exit is when Vertical speed exceeds 10m/s
+def exit():
+  exit = row[6] when Vertical speed is > 10 m/s
 
+# flysight record will probably never be exactly 3000 in file
+def window_top():
+  window_top() = (row[3] > 2999.99 < 3000.01) + ground_level
 
+# flysight record will probably never be exactly 2000 in file
+def window_bottom():
+  window_bottom() = (row[3] < 2000.01 < 1999.99) + ground_level
 
-
-
-
-
-    # for row in csv_reader_dict:
-        # window starts at 3000 and ends at 2000 hMSL
-        # window = int(row['hMSL'])
-        # if window >= 2000 <= 30001:
-            # print(window)
-
-
-
+def time_in_window():
+  # Need to use corresponding rows of top and bottom to determine start and finish
+  window_bottom(row[0]) - window_top(row[0])
+  if time_in_window() > 90 seconds
+  # Save files in a new directory
+  append.over90 directory
