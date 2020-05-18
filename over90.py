@@ -60,8 +60,8 @@ def check_csv_greater_90(filename):
     # variables to call on within function
     window_start = 3000.0
     window_stop = 2000.0
-    target_time = 85.0
-    buffer = 2.0
+    target_time = 90.0
+    buffer = 5.0
     # competition definition of exit is when Vertical Speed exceeds 10m/s
     vspeed_exit_signal = 10.0
 
